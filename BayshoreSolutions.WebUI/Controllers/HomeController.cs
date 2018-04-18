@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BayshoreSolutions.Framework;
 
 namespace BayshoreSolutions.WebUI.Controllers
 {
@@ -13,9 +14,12 @@ namespace BayshoreSolutions.WebUI.Controllers
             return View();
         }
 
-        public ActionResult ConvertNumber(float number)
+        [HttpPost]
+        public ActionResult ConvertNumber(decimal number)
         {
-            return View();
+            NumberConverter nc = new NumberConverter(number);
+            string output = nc.Convert();
+            return Json(output, JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -2,18 +2,31 @@
     ViewBag.Title = "Number Converter";
 }
 
+<style type="text/css">
+    span.error {
+        color: #cc0000;
+        background-color: #ffd8d8;
+        padding: 5px;
+        font-size: 12px;
+        border-radius: 3px;
+        margin: 10px;
+    }
+</style>
+
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-heading">Number Converter</div>
         <div class="panel-body">
-            <div class="form-group">
-                <input type="text" id="uxNumber" class="form-control" />
-                <button id="uxSubmit" class="btn btn-primary">Convert</button>
+            <div class="form-group form-inline">
+                <form id="converterForm" action="#">
+                    <input type="text" id="input" name="input" class="form-control" required />
+                    <a id="uxSubmit" class="btn btn-primary">Convert</a>
+                </form>
             </div>
         </div>
     </div>
 
-    <div id="uxOutput" class="hide alert alert-success">
+    <div id="uxOutput" style="display: none;" class="alert alert-success">
 
     </div>
 
@@ -24,17 +37,39 @@
     $(document).ready(function () {
 
         $('#uxSubmit').click(function (e) {
-            var number = $('#uxNumber').val();
-            var url = '@Url.Action("ConvertNubmer")';
-            $.ajax({
-                type: 'POST',
-                url: url,
-                data: number
-            }).done(function (data) {
-
+            $('#converterForm').validate({
+                errorElement: 'span',
+                success: "valid",
+                rules: {
+                    input: {
+                        required: true,
+                        number: true
+                    }
+                },
+                messages: {
+                    input: 'Input must be a properly formatted number.'
+                }
             });
-        });
+            if ($('#converterForm').valid()) {
+                $('.error').hide();
+                var number = $('#input').val();
+                var url = '@Url.Action("ConvertNumber", "Home")';
+                $.ajax({
+                    url: url,
+                    type: 'POST',
+                    data: {
+                        "number": number
+                    }
+                }).done(function (data) {
+                    $('#uxOutput').html(data);
+                    $('#uxOutput').fadeIn(3000);
+                });
+            }
+            else {
+                $('#uxOutput').hide();
+            }
 
+        });
     });
 
 </script>
