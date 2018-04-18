@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BayshoreSolutions.Framework", "BayshoreSolutions.Framework\BayshoreSolutions.Framework.csproj", "{FD0AE86C-5E7A-4806-9BC5-BAAF48100E12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BayshoreSolutions.WebUI", "BayshoreSolutions.WebUI\BayshoreSolutions.WebUI.csproj", "{D13B302F-D969-4838-8B1E-68FA7B9C7D44}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FD0AE86C-5E7A-4806-9BC5-BAAF48100E12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD0AE86C-5E7A-4806-9BC5-BAAF48100E12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD0AE86C-5E7A-4806-9BC5-BAAF48100E12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD0AE86C-5E7A-4806-9BC5-BAAF48100E12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D13B302F-D969-4838-8B1E-68FA7B9C7D44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13B302F-D969-4838-8B1E-68FA7B9C7D44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13B302F-D969-4838-8B1E-68FA7B9C7D44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13B302F-D969-4838-8B1E-68FA7B9C7D44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1903A8C7-9043-408A-B86A-19757C4E1735}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://masterbrain:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BayshoreSolutions.Framework\\BayshoreSolutions.Framework.csproj
+		SccProjectName1 = BayshoreSolutions.Framework
+		SccLocalPath1 = BayshoreSolutions.Framework
+		SccProjectUniqueName2 = BayshoreSolutions.WebUI\\BayshoreSolutions.WebUI.csproj
+		SccProjectName2 = BayshoreSolutions.WebUI
+		SccLocalPath2 = BayshoreSolutions.WebUI
+	EndGlobalSection
+EndGlobal
